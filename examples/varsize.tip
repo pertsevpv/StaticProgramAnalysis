@@ -1,0 +1,13 @@
+main() {
+    var a, b, c, d, cond, r;
+    a = 100;
+    b = a;
+    while (1000 > b) {
+        b = b * a;
+    }
+    c = b * b;
+    d = c / b / a;
+    if (d > 100) cond = 1;
+    else cond = 0;
+    return cond;
+}
