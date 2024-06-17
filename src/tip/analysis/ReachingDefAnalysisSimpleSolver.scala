@@ -45,9 +45,9 @@ abstract class ReachingDefAnalysis(cfg: IntraproceduralProgramCfg)(implicit decl
 class ReachingDefAnalysisSimpleSolver(cfg: IntraproceduralProgramCfg)(implicit declData: DeclarationData)
   extends ReachingDefAnalysis(cfg)
     with SimpleMapLatticeFixpointSolver[CfgNode]
-    with BackwardDependencies
+    with ForwardDependencies
 
 class ReachingDefAnalysisWorklistSolver(cfg: IntraproceduralProgramCfg)(implicit declData: DeclarationData)
   extends ReachingDefAnalysis(cfg)
     with SimpleWorklistFixpointSolver[CfgNode]
-    with BackwardDependencies
+    with ForwardDependencies
